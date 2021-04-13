@@ -1,12 +1,9 @@
 import React from 'react'
 
-export default function QuotesBox() {
+export default function QuotesBox(props) {
     return (
         <div>
-            {/* randomQuote() {
-    const randomNumber = Math.floor(Math.random() * this.state.quoteData.length);
-    return this.state.quoteData[randomNumber];
-  } */}
+            <p>{props.randomQuote()}</p>
         </div>
     )
 }
