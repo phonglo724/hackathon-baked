@@ -47,7 +47,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Love Muffins</h1>
+        <h1>All You Knead Is Love</h1>
+        <h2>Share A loaf of love with friends</h2>
         <QuotesBox quotes={this.state.quotes} randomQuote={this.randomQuote} />
         {this.state.imageList.length > 0 ? (
           <ImageBox
