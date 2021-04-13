@@ -23,7 +23,7 @@ class App extends Component {
     fetch(quotesURL)
       .then((response) => response.json())
       .then((allquotes) => this.setState({
-        quotes: allquotes.quotes.map(quote => quote.text)
+        quotes: allquotes.quotes.map(quote => quote.text).filter(quote => quote.includes('love'))
       }))
   }
 
@@ -47,8 +47,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>All You Knead Is Love</h1>
-        <h2>Share A loaf of love with friends</h2>
+        <div className="title">
+          <h1>All You Knead Is Love</h1>
+          <p>Share A loaf of love with friends</p>
+        </div>
         <QuotesBox quotes={this.state.quotes} randomQuote={this.randomQuote} />
         {this.state.imageList.length > 0 ? (
           <ImageBox
