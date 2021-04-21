@@ -8,6 +8,9 @@
 .App{
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 body{
@@ -26,6 +29,14 @@ div.title{
     text-align: center;
 }
 
+.title h1{
+    padding-bottom: 0px;
+}
+
+.title p{
+    padding-bottom: 50px;
+}
+
 div.title:after {
 content: "";
 display: block;
@@ -41,7 +52,7 @@ div.title:before {
     content: "";
     display: block;
     position: absolute;
-    top: 180px;
+    top: 200px;
     left: 6px;
     width: 100%;
     height: 30px;
@@ -73,21 +84,18 @@ font-size: 5em;
 
 .main-container{
     margin-top: 7%;
-    padding: 25px;
+    padding: 75px;
     display: flex;
-    height: 50vh;
+    height: 70vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    outline: 2px dotted cornflowerblue;
     width: 70%;
 }
 
 .image-container{
-    height: 200px;
-    width: 200px;
-    outline: 2px dotted cornflowerblue;
+    display: flex;
 }
 
 section{

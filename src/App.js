@@ -51,14 +51,16 @@ class App extends Component {
           <h1>All You Knead Is Love</h1>
           <p>Share A loaf of love with friends</p>
         </div>
-        <QuotesBox quotes={this.state.quotes} randomQuote={this.randomQuote} />
-        {this.state.imageList.length > 0 ? (
-          <ImageBox
-            imageIndex={this.state.imageIndex}
-            imageList={this.state.imageList}
-            onClickForward={this.onClickForward}
-          />
-        ) : null}
+        <div className="main-container">
+          <QuotesBox quotes={this.state.quotes} randomQuote={this.randomQuote} />
+            {this.state.imageList.length > 0 ? (
+              <ImageBox
+                imageIndex={this.state.imageIndex}
+                imageList={this.state.imageList}
+                onClickForward={this.onClickForward}
+                />
+          ) : null}
+          </div>
       </div>
     );
   }
